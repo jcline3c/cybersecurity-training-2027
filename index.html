@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--
+=======================================================================
+PATH FORWARD IT - 2027 CYBERSECURITY TRAINING WEBSITE
+=======================================================================
+
+HOW TO UPDATE THIS WEBSITE (GitHub Pages)
+
+  1. Find the section marked "EDIT HERE: TRAINING DATES & ZOOM LINKS"
+     directly below. You only need to edit the TRAINING_SESSIONS list.
+
+  2. CHANGE A ZOOM LINK:
+     Find the session date and replace ONLY the URL inside "zoom".
+
+  3. CHANGE A DATE OR TIME:
+     Edit "date" in YYYY-MM-DD format or edit "time", e.g. "1:00 PM".
+     The weekday and calendar icon will update automatically.
+
+  4. ADD A SESSION:
+     Copy an existing {...}, line, paste it on a new line, and update its
+     date, time, duration ("minutes": 60 or 30), and "zoom" URL.
+     A comma after every row (including the final row) is OK.
+     The page automatically sorts dates and updates session counts.
+
+  5. REMOVE A SESSION:
+     Delete the entire line for that session.
+
+  6. PUBLISH THE CHANGE:
+     On GitHub, edit index.html, click "Commit changes", and wait for
+     GitHub Pages to redeploy. The public website URL does not change.
+
+IMPORTANT:
+  - The Zoom meeting URLs are public to anyone who views the site.
+  - Times retain the schedule's source formatting. No time zone is listed.
+  - Edit the TRAINING_SESSIONS list rather than the styling/renderer below.
+  - Everything is in this one file; no build tools or external libraries.
+=======================================================================
+-->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="light" name="color-scheme"/>
+  <meta content="#092138" name="theme-color"/>
+  <meta content="Explore Path Forward IT's 2027 live cybersecurity training schedule. Choose from 60-minute trainings and 30-minute refreshers and join the session that works for your team." name="description"/>
+  <title>
+   2027 Cybersecurity Training | Path Forward IT
+  </title>
+  <script>
+   /* ===============================================================
+       EDIT HERE: TRAINING DATES & ZOOM LINKS
+       ===============================================================
+       One row = one webinar session.
+
+       Fields:
+         date    : YYYY-MM-DD (the weekday and month are automatic)
+         time    : the displayed time, for example "12:00 PM"
+         minutes : use 60 for full training or 30 for the refresher
+         zoom    : the full Zoom join URL between quotation marks
+
+       Add, edit, or delete rows below. Keep commas between rows.
+       There is no need to manually edit dates or counts elsewhere.
+       =============================================================== */
+    const TRAINING_SESSIONS = [
+      // 60-MINUTE CYBERSECURITY TRAINING
+      { date: "2027-01-12", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/89289224484?pwd=CzropuizdZaME2PsES2yU8vsIZpCim.1" },
+      { date: "2027-02-10", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/89299759787?pwd=iSMFimQ26b0ELYQwIQbnWbbaSk0IUC.1" },
+      { date: "2027-03-18", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/85448890207?pwd=wajk27VMnhp8esfKfN5b1TtNitu6XC.1" },
+      { date: "2027-04-13", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/89450864354?pwd=vbht7jhUFe0ejQrLhur26IbyjhgfIu.1" },
+      { date: "2027-05-12", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/88390166540?pwd=evjdZ64zCAwWMpukJJipoxIQioYAxx.1" },
+      { date: "2027-06-16", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/82658969795?pwd=imECJE0zGkXZa1eZSlvbBknhd79Iqb.1" },
+      { date: "2027-07-13", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/83214915804?pwd=a3ir4iymNOy9Nwh4ZEXNs7PXTIpuG3.1" },
+      { date: "2027-08-11", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/85037223854?pwd=Ya4DEJ5Ih8JZQTWbdBQFainL1wKSBK.1" },
+      { date: "2027-09-16", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/82379515969?pwd=XIvO10nqbe2STFaLQPzH59PjQfGUuC.1" },
+      { date: "2027-10-12", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/89655370538?pwd=1Zt0HvcWCZeSpIrkoVjs9gG9hLkRab.1" },
+      { date: "2027-11-17", time: "12:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/82703961633?pwd=Z5GlvgcI6p3vxAYLt1wmqy9XQxVbLG.1" },
+      { date: "2027-12-16", time: "1:00 PM", minutes: 60, zoom: "https://blueallianceit.zoom.us/j/88572116685?pwd=DUXn5znrvbsa34MpYwxdsHObasuPh3.1" },
+
+      // 30-MINUTE CYBERSECURITY REFRESHER
+      { date: "2027-02-16", time: "12:00 PM", minutes: 30, zoom: "https://blueallianceit.zoom.us/j/82088702409?pwd=H2AjcfEpAAvCheA6nBh8IWucbZQ5oW.1" },
+      { date: "2027-04-21", time: "1:00 PM", minutes: 30, zoom: "https://blueallianceit.zoom.us/j/89740032364?pwd=Y5P6m1E65CKpNqGaNvcKwOvxfePXxJ.1" },
+      { date: "2027-06-24", time: "12:00 PM", minutes: 30, zoom: "https://blueallianceit.zoom.us/j/89082318100?pwd=5Ooj2VY75SjrNHDsB2a98JtY9jByVp.1" },
+      { date: "2027-08-17", time: "1:00 PM", minutes: 30, zoom: "https://blueallianceit.zoom.us/j/85417411730?pwd=CPdJFGybIWkHWX1R5wKwx7uCMfzIdH.1" },
+      { date: "2027-10-20", time: "12:00 PM", minutes: 30, zoom: "https://blueallianceit.zoom.us/j/88530322544?pwd=b9uM51IXUatqunvSFQ8toIShc5aak4.1" },
+    ];
+  </script>
+  <style>
+   /* ==== 01. DESIGN TOKENS - colors, backgrounds, rounding ==== */
+    :root {
+      --navy: #092138;
+      --navy2: #123451;
+      --blue: #087bd3;
+      --cyan: #13b9ec;
+      --ink: #172b3b;
+      --muted: #53697a;
+      --soft: #f3f8fa;
+      --line: #dfe8ef;
+      --white: #fff;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 94px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter,"Segoe UI",Arial,sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      background: var(--white);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #00a9dc;
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(1150px,calc(100% - 56px));
+      margin: auto;
+    }
+
+    /* ==== 02. HEADER AND NAVIGATION ==== */
+    .site-header {
+      height: 91px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid #eaf0f3;
+    }
+
+    .head-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .brand img {
+      display: block;
+      width: 220px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .head-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 13px;
+      letter-spacing: .01em;
+      font-weight: 700;
+    }
+
+    .head-links a {
+      text-decoration: none;
+    }
+
+    .head-links a:hover {
+      color: var(--blue);
+    }
+
+    .head-links .outline {
+      padding: 10px 17px;
+      border: 1px solid #c6e6f3;
+      border-radius: 999px;
+      color: #096ca8;
+    }
+
+    /* ==== 03. HERO / MAIN BANNER ==== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: linear-gradient(119deg,#08213b 5%,#0c2d4b 68%,#114765 100%);
+      color: #fff;
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 74% 49%,rgba(19,185,236,.17),transparent 37%),linear-gradient(90deg,rgba(255,255,255,.027) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size: auto,64px 64px,64px 64px;
+      opacity: .85;
+      z-index: -1;
+    }
+
+    .hero-inner {
+      min-height: 585px;
+      padding: 88px 0 94px;
+      display: grid;
+      grid-template-columns: 1fr 390px;
+      align-items: center;
+      gap: 44px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 800;
+      font-size: 12px;
+      color: #76daf5;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--cyan);
+    }
+
+    h1,h2,h3,p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px,5.4vw,78px);
+      line-height: 1.04;
+      letter-spacing: -.052em;
+      margin: 24px 0 26px;
+      max-width: 680px;
+      font-weight: 780;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #36c5ee;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #d7e6ee;
+      max-width: 590px;
+      line-height: 1.67;
+      margin-bottom: 31px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: 14px;
+      padding: 15px 22px;
+      transition: transform .16s ease,background .16s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #072137;
+    }
+
+    .btn-primary:hover {
+      background: #68d8f4;
+    }
+
+    .btn-subtle {
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.65);
+      border-radius: 0;
+      padding: 13px 0;
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 355px;
+      display: grid;
+      place-items: center;
+    }
+
+    .halo {
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border: 1px solid rgba(89,206,245,.34);
+      border-radius: 50%;
+      box-shadow: 0 0 0 31px rgba(0,167,227,.03),0 0 0 70px rgba(0,167,227,.025);
+    }
+
+    .shield {
+      position: relative;
+      background: linear-gradient(155deg,#13d0f0,#0865b7);
+      width: 200px;
+      height: 232px;
+      clip-path: polygon(50% 0,98% 20%,98% 54%,85% 78%,50% 100%,15% 78%,2% 54%,2% 20%);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    }
+
+    .shield:before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      clip-path: inherit;
+      background: linear-gradient(130deg,#123b60,#07243d);
+    }
+
+    .shield svg {
+      z-index: 1;
+      width: 91px;
+      height: 91px;
+    }
+
+    .mini {
+      position: absolute;
+      background: #effbff;
+      border: 1px solid #bfe9f6;
+      color: #184967;
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      box-shadow: 0 16px 42px rgba(0,0,0,.18);
+    }
+
+    .mini.one {
+      top: 38px;
+      right: 0;
+    }
+
+    .mini.two {
+      bottom: 51px;
+      left: -2px;
+    }
+
+    .mini b {
+      color: #049ad1;
+    }
+
+    /* ==== 04. QUICK FACTS RIBBON ==== */
+    .ribbon {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .ribbon-inner {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 26px;
+      padding: 27px 0;
+    }
+
+    .ribbon-item {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .ribbon-item .bullet {
+      width: 8px;
+      height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px #e7f8fc;
+    }
+
+    .ribbon-item b {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .ribbon-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* ==== 05. COMMON SECTION STYLES ==== */
+    .section {
+      padding: 91px 0;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: #077ebe;
+      font-weight: 850;
+      margin-bottom: 13px;
+    }
+
+    .section h2 {
+      font-size: clamp(32px,3.6vw,47px);
+      line-height: 1.16;
+      letter-spacing: -.043em;
+      margin: 0 0 20px;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ==== 06. TRAINING OPTIONS CARDS ==== */
+    .formats {
+      background: var(--soft);
+    }
+
+    .format-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 37px;
+    }
+
+    .format-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 35px 38px 37px;
+      box-shadow: 0 11px 28px rgba(26,66,97,.035);
+    }
+
+    .format-card h3 {
+      font-size: 27px;
+      letter-spacing: -.035em;
+      margin: 6px 0 12px;
+    }
+
+    .format-card p {
+      color: var(--muted);
+      max-width: 460px;
+    }
+
+    .duration {
+      color: #087fb3;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .16em;
+    }
+
+    .format-meta {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      margin-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .format-meta a {
+      color: #066ba6;
+      text-decoration: none;
+    }
+
+    .format-meta a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==== 07. WHAT YOU WILL LEARN ==== */
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .topic {
+      padding: 32px 27px 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      min-height: 286px;
+    }
+
+    .topic-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e8f6fb;
+      color: #0678b5;
+      width: 47px;
+      height: 47px;
+      border-radius: 13px;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 27px;
+    }
+
+    .topic h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      letter-spacing: -.02em;
+      margin: 0 0 12px;
+    }
+
+    .topic p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .callout {
+      margin-top: 30px;
+      background: #eff9fd;
+      border-left: 4px solid var(--cyan);
+      padding: 24px 27px;
+      color: #305063;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ==== 08. WEBINAR SCHEDULE CARDS ==== */
+    .schedule {
+      background: #f6f9fb;
+    }
+
+    .schedule-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .schedule-head .lead {
+      margin-bottom: 0;
+    }
+
+    .pill {
+      display: inline-flex;
+      border: 1px solid #cee4ef;
+      padding: 7px 13px;
+      border-radius: 99px;
+      color: #32718c;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .schedule-group {
+      padding: 37px 40px;
+      background: #fff;
+      border: 1px solid #e1e9ef;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 24px rgba(34,72,106,.025);
+      scroll-margin-top: 115px;
+    }
+
+    .schedule-group+.schedule-group {
+      margin-top: 32px;
+    }
+
+    .group-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 26px;
+      margin-bottom: 18px;
+    }
+
+    .group-top h3 {
+      font-size: 25px;
+      letter-spacing: -.036em;
+      margin: 0;
+    }
+
+    .group-top small {
+      font-weight: 800;
+      font-size: 12px;
+      color: #0f7cab;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 0 35px;
+    }
+
+    .session-row {
+      display: flex;
+      align-items: center;
+      min-height: 92px;
+      border-bottom: 1px solid var(--line);
+      gap: 17px;
+    }
+
+    .session-row:last-child,.session-row:nth-last-child(2) {
+      border-bottom-color: transparent;
+    }
+
+    .date-mark {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 57px;
+      min-width: 57px;
+      height: 60px;
+      border: 1px solid #cfeaf2;
+      background: #f1fbfe;
+      border-radius: 8px;
+    }
+
+    .date-mark .month {
+      font-size: 10px;
+      letter-spacing: .12em;
+      font-weight: 900;
+      color: #177eb3;
+    }
+
+    .date-mark .day {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -.06em;
+      line-height: 1.22;
+      color: #123f58;
+    }
+
+    .session-detail {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .session-detail strong {
+      display: block;
+      font-size: 14px;
+      color: #213c4e;
+    }
+
+    .session-time {
+      display: block;
+      font-size: 13px;
+      color: #607889;
+      margin-top: 3px;
+    }
+
+    .session-link {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      white-space: nowrap;
+      font-size: 13px;
+      text-decoration: none;
+      color: #0379bb;
+      font-weight: 800;
+    }
+
+    .session-link:hover {
+      text-decoration: underline;
+    }
+
+    .time-note {
+      color: #627c89;
+      font-size: 13px;
+      margin: 24px 0 0;
+    }
+
+    /* ==== 09. HOW TO ATTEND / CONTACT ==== */
+    .how {
+      padding-bottom: 88px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 38px;
+      margin-top: 40px;
+    }
+
+    .step {
+      border-top: 3px solid #14b9ec;
+      padding-top: 23px;
+    }
+
+    .step span {
+      color: #159ac8;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: .13em;
+    }
+
+    .step h3 {
+      font-size: 22px;
+      margin: 12px 0 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact {
+      background: #0c2c49;
+      color: white;
+      border-radius: 19px;
+      padding: 37px 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      margin-top: 48px;
+    }
+
+    .contact h3 {
+      font-size: 26px;
+      margin: 0 0 6px;
+    }
+
+    .contact p {
+      color: #d6e6ee;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: #052037;
+      background: #55d2f3;
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 14px 19px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    /* ==== 10. FOOTER ==== */
+    footer {
+      background: #f1f6f8;
+      border-top: 1px solid #dfeaf0;
+      padding: 34px 0 38px;
+    }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #536e7e;
+      font-size: 13px;
+    }
+
+    .foot img {
+      width: 178px;
+    }
+
+    .foot a {
+      color: #0879b9;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .foot a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==== 11. RESPONSIVE - TABLET ==== */
+    @media (max-width:980px) {
+      .hero-inner {
+        grid-template-columns: 1fr 290px;
+        gap: 14px;
+      }
+
+      .hero-visual {
+        transform: scale(.84);
+      }
+
+      .session-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .session-row:nth-last-child(2) {
+        border-bottom-color: var(--line);
+      }
+
+      .session-row:last-child {
+        border-bottom-color: transparent;
+      }
+
+    }
+
+    /* ==== 12. RESPONSIVE - MOBILE ==== */
+    @media (max-width:720px) {
+      .wrap {
+        width: min(100% - 32px,1150px);
+      }
+
+      .site-header {
+        height: auto;
+        min-height: 74px;
+      }
+
+      .brand img {
+        width: 185px;
+      }
+
+      .head-links {
+        gap: 12px;
+      }
+
+      .head-links>a:first-child {
+        display: none;
+      }
+
+      .head-links .outline {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 69px 0 76px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .ribbon-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .ribbon-item {
+        margin-left: 6px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .format-grid,.topic-grid,.steps {
+        grid-template-columns: 1fr;
+      }
+
+      .format-card {
+        padding: 27px;
+      }
+
+      .topic {
+        min-height: 0;
+      }
+
+      .schedule-head {
+        display: block;
+      }
+
+      .pill {
+        margin-top: 14px;
+      }
+
+      .schedule-group {
+        padding: 25px 22px;
+      }
+
+      .group-top h3 {
+        font-size: 22px;
+      }
+
+      .session-row {
+        gap: 12px;
+      }
+
+      .session-link {
+        font-size: 12px;
+      }
+
+      .session-detail strong {
+        font-size: 13px;
+      }
+
+      .session-detail {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .date-mark {
+        width: 50px;
+        min-width: 50px;
+      }
+
+      .contact {
+        padding: 28px;
+        display: block;
+      }
+
+      .contact a {
+        display: inline-block;
+        margin-top: 22px;
+      }
+
+      .foot {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+    /* ==== 13. RESPONSIVE - SMALL PHONES ==== */
+    @media (max-width:390px) {
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .head-links .outline {
+        font-size: 11px;
+      }
+
+      .session-link {
+        font-size: 11px;
+      }
+
+      .session-detail strong {
+        font-size: 12px;
+      }
+
+      .date-mark {
+        width: 44px;
+        min-width: 44px;
+      }
+
+      .schedule-group {
+        padding: 20px 15px;
+      }
+
+    }
+
+    /* ==== 14. PRINT LAYOUT ==== */
+    @media print {
+      .hero {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .hero-inner {
+        min-height: 280px;
+        padding: 30px 0;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .section {
+        padding: 25px 0;
+      }
+
+      .session-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .session-row {
+        break-inside: avoid;
+      }
+
+      .schedule-group {
+        break-inside: avoid;
+      }
+
+      .head-links {
+        display: none;
+      }
+
+    }
+  </style>
+ </head>
+ <body>
+  <!-- SITE HEADER / BRAND LOGO AND NAVIGATION -->
+  <header class="site-header">
+   <div class="wrap head-content">
+    <a aria-label="Path Forward IT homepage" class="brand" href="https://pathforwardit.com/">
+     <!-- Logo image is embedded in the src attribute below. No separate image file is needed. -->
+     <img alt="Path Forward IT" src="data:image/png;base64,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"/>
+    </a>
+    <nav aria-label="Page navigation" class="head-links">
+     <a href="#topics">
+      What you'll learn
+     </a>
+     <a href="#schedule">
+      2027 schedule
+     </a>
+     <a class="outline" href="mailto:carrie.dean@pathforwardit.com?subject=2027%20Cybersecurity%20Training">
+      Questions? Contact us
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <!-- HERO BANNER -->
+   <section class="hero">
+    <div class="wrap hero-inner">
+     <div>
+      <div class="eyebrow">
+       2027 cybersecurity training webinars
+      </div>
+      <h1>
+       Cybersecurity starts with
+       <em>
+        your team.
+       </em>
+      </h1>
+      <p>
+       Cyber threats are always changing. Our live training sessions help employees recognize common risks, make safer decisions, and protect the information they work with every day.
+      </p>
+      <div class="hero-actions">
+       <a class="btn btn-primary" href="#schedule">
+        Find a training date
+        <span aria-hidden="true">
+         →
+        </span>
+       </a>
+       <a class="btn btn-subtle" href="#formats">
+        Explore training options
+       </a>
+      </div>
+     </div>
+     <div aria-hidden="true" class="hero-visual">
+      <div class="halo">
+      </div>
+      <div class="shield">
+       <svg fill="none" viewbox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 40V29C26 18 34 11 45 11C56 11 64 18 64 29V40" stroke="#62dcf7" stroke-linecap="round" stroke-width="7">
+        </path>
+        <rect fill="#EAFBFF" height="43" rx="8" width="56" x="17" y="38">
+        </rect>
+        <circle cx="45" cy="57" fill="#067AB4" r="6">
+        </circle>
+        <path d="M45 63V71" stroke="#067AB4" stroke-linecap="round" stroke-width="5">
+        </path>
+       </svg>
+      </div>
+      <div class="mini one">
+       <b>
+        01
+       </b>
+       Recognize threats
+      </div>
+      <div class="mini two">
+       <b>
+        02
+       </b>
+       Protect information
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- KEY FACTS -->
+   <div class="ribbon">
+    <div class="wrap ribbon-inner">
+     <div class="ribbon-item">
+      <span class="bullet">
+      </span>
+      <div>
+       <b>
+        Live online training
+       </b>
+       <small>
+        Convenient webinar sessions
+       </small>
+      </div>
+     </div>
+     <div class="ribbon-item">
+      <span class="bullet">
+      </span>
+      <div>
+       <b>
+        Two session lengths
+       </b>
+       <small>
+        60-minute training or 30-minute refresher
+       </small>
+      </div>
+     </div>
+     <div class="ribbon-item">
+      <span class="bullet">
+      </span>
+      <div>
+       <b>
+        Choose your date
+       </b>
+       <small data-session-count="all">
+        17 available sessions in 2027
+       </small>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- TRAINING TYPES -->
+   <section class="section formats" id="formats">
+    <div class="wrap">
+     <div class="section-kicker">
+      Training options
+     </div>
+     <h2>
+      Find the right training for your team.
+     </h2>
+     <p class="lead">
+      Choose a full training session or a shorter refresher that fits into your workday.
+     </p>
+     <div class="format-grid">
+      <article class="format-card">
+       <div class="duration">
+        FULL SESSION
+       </div>
+       <h3>
+        60-Minute Cybersecurity Training
+       </h3>
+       <p>
+        A one-hour session covering phishing, social engineering, password security, multifactor authentication, and the everyday habits that help keep your workplace secure.
+       </p>
+       <div class="format-meta">
+        <span data-session-count="60">
+         12 dates available
+        </span>
+        <a href="#sessions60">
+         View 60-minute dates →
+        </a>
+       </div>
+      </article>
+      <article class="format-card">
+       <div class="duration">
+        SHORT SESSION
+       </div>
+       <h3>
+        30-Minute Cybersecurity Refresher
+       </h3>
+       <p>
+        A shorter session for employees who need a refresher or have limited time. It focuses on the essential cybersecurity information your team should know.
+       </p>
+       <div class="format-meta">
+        <span data-session-count="30">
+         5 dates available
+        </span>
+        <a href="#sessions30">
+         View 30-minute dates →
+        </a>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <!-- CYBERSECURITY TOPICS -->
+   <section class="section topics" id="topics">
+    <div class="wrap">
+     <div class="section-kicker">
+      What you'll learn
+     </div>
+     <h2>
+      Cybersecurity in everyday situations.
+     </h2>
+     <p class="lead">
+      Our 60-minute training uses practical examples to explain the security risks employees may encounter at work.
+     </p>
+     <div class="topic-grid">
+      <article class="topic">
+       <div class="topic-number">
+        01
+       </div>
+       <h3>
+        Phishing &amp; Social Engineering
+       </h3>
+       <p>
+        Spot suspicious emails, phone calls, and text messages, recognize common warning signs, and know what to do when something doesn't look right.
+       </p>
+      </article>
+      <article class="topic">
+       <div class="topic-number">
+        02
+       </div>
+       <h3>
+        Passwords &amp; Multifactor Authentication
+       </h3>
+       <p>
+        Understand stronger passwords, safer password management, and why an extra layer of protection matters for your accounts.
+       </p>
+      </article>
+      <article class="topic">
+       <div class="topic-number">
+        03
+       </div>
+       <h3>
+        Cybersecurity in the Workplace
+       </h3>
+       <p>
+        See how everyday actions can affect security, from front desk teams handling payments and email to clinical teams working with patient information.
+       </p>
+      </article>
+     </div>
+     <div class="callout">
+      <b>
+       Cybersecurity is a team effort.
+      </b>
+      The goal is to help everyone recognize potential threats, make informed decisions, and reduce the risk of a cyber incident.
+     </div>
+    </div>
+   </section>
+   <!-- WEBINAR SCHEDULE - cards are generated from TRAINING_SESSIONS -->
+   <section class="section schedule" id="schedule">
+    <div class="wrap">
+     <div class="section-kicker">
+      Save your date
+     </div>
+     <div class="schedule-head">
+      <div>
+       <h2>
+        2027 webinar schedule
+       </h2>
+       <p class="lead">
+        Choose the session that works best for your office. Select
+        <b>
+         Join webinar
+        </b>
+        beside the date you want to attend to open your Zoom session.
+       </p>
+      </div>
+      <span class="pill">
+       All dates in 2027
+      </span>
+     </div>
+     <div class="schedule-group" id="sessions60">
+      <div class="group-top">
+       <h3>
+        60-Minute Sessions
+       </h3>
+       <small data-session-count="60">
+        12 available dates
+       </small>
+      </div>
+      <div class="session-grid" id="schedule-60">
+       <!-- Webinar cards are created automatically from TRAINING_SESSIONS near the top of this file. -->
+       <noscript>
+        Please enable JavaScript to see the training dates and Zoom join links.
+       </noscript>
+      </div>
+     </div>
+     <div class="schedule-group" id="sessions30">
+      <div class="group-top">
+       <h3>
+        30-Minute Sessions
+       </h3>
+       <small data-session-count="30">
+        5 available dates
+       </small>
+      </div>
+      <div class="session-grid" id="schedule-30">
+       <!-- Webinar cards are created automatically from TRAINING_SESSIONS near the top of this file. -->
+       <noscript>
+        Please enable JavaScript to see the training dates and Zoom join links.
+       </noscript>
+      </div>
+     </div>
+     <p class="time-note">
+      Times are shown exactly as provided in the training schedule. Please confirm the time zone with the Path Forward IT team if needed.
+     </p>
+    </div>
+   </section>
+   <!-- HOW TO ATTEND -->
+   <section class="section how" id="how-to-attend">
+    <div class="wrap">
+     <div class="section-kicker">
+      How to attend
+     </div>
+     <h2>
+      Joining is simple.
+     </h2>
+     <div class="steps">
+      <div class="step">
+       <span>
+        STEP 01
+       </span>
+       <h3>
+        Choose a session
+       </h3>
+       <p>
+        Review the schedule and select the date and length that works for you and your team.
+       </p>
+      </div>
+      <div class="step">
+       <span>
+        STEP 02
+       </span>
+       <h3>
+        Open your webinar link
+       </h3>
+       <p>
+        Click
+        <b>
+         Join webinar
+        </b>
+        next to your chosen date to open Zoom. You can also email Carrie with questions.
+       </p>
+      </div>
+      <div class="step">
+       <span>
+        STEP 03
+       </span>
+       <h3>
+        Have your team join
+       </h3>
+       <p>
+        On training day, everyone in your office should use the link provided for that session.
+       </p>
+      </div>
+     </div>
+     <div class="contact">
+      <div>
+       <h3>
+        Need help choosing a session?
+       </h3>
+       <p>
+        Email us if you have questions about the schedule or need assistance joining a session.
+       </p>
+      </div>
+      <a href="mailto:carrie.dean@pathforwardit.com?subject=2027%20Cybersecurity%20Training">
+       Email Carrie →
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+   <div class="wrap foot">
+    <a href="https://pathforwardit.com/">
+     <!-- Logo image is embedded in the src attribute below. No separate image file is needed. -->
+     <img alt="Path Forward IT" src="data:image/png;base64,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"/>
+    </a>
+    <span>
+     2027 Cybersecurity Training Webinars
+    </span>
+    <a href="https://pathforwardit.com/">
+     pathforwardit.com →
+    </a>
+   </div>
+  </footer>
+  <script>
+   /* ================================================================
+       AUTOMATIC SCHEDULE RENDERER - NO EDITS NEEDED IN THIS SECTION
+
+       Takes TRAINING_SESSIONS from the top of the file, sorts by date,
+       calculates weekday/month/day, adds Join Webinar buttons, and
+       updates all date counts shown elsewhere on the page.
+       ================================================================ */
+    (function renderTrainingSessions() {
+      'use strict';
+
+      const dateFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'UTC',
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric'
+      });
+      const shortMonthFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'UTC',
+        month: 'short'
+      });
+
+      // Parse dates at noon UTC so the displayed day cannot change
+      // based on your customer's local time zone.
+      function parseDate(isoDate) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate)) return null;
+        const [year, month, day] = isoDate.split('-').map(Number);
+        const parsed = new Date(Date.UTC(year, month - 1, day, 12));
+        if (parsed.getUTCFullYear() !== year ||
+            parsed.getUTCMonth() !== month - 1 ||
+            parsed.getUTCDate() !== day) return null;
+        return parsed;
+      }
+
+      function appendTextElement(parent, tagName, className, text) {
+        const el = document.createElement(tagName);
+        if (className) el.className = className;
+        el.textContent = text;
+        parent.appendChild(el);
+        return el;
+      }
+
+      function createSessionCard(session) {
+        const fullDate = dateFormatter.format(session.parsedDate);
+        const weekdayMonthDay = fullDate;  // Example: Tuesday, January 12
+        const calendarMonth = shortMonthFormatter.format(session.parsedDate).toUpperCase();
+        const calendarDay = String(session.parsedDate.getUTCDate()).padStart(2, '0');
+
+        const card = document.createElement('article');
+        card.className = 'session-row';
+
+        const calendar = document.createElement('div');
+        calendar.className = 'date-mark';
+        calendar.setAttribute('aria-hidden', 'true');
+        appendTextElement(calendar, 'span', 'month', calendarMonth);
+        appendTextElement(calendar, 'span', 'day', calendarDay);
+        card.appendChild(calendar);
+
+        const info = document.createElement('div');
+        info.className = 'session-detail';
+        appendTextElement(info, 'strong', '', weekdayMonthDay);
+        appendTextElement(info, 'span', 'session-time', session.time);
+        card.appendChild(info);
+
+        const link = document.createElement('a');
+        link.className = 'session-link';
+        link.href = session.zoom;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.dataset.session = `${session.date}-${session.minutes}`;
+        link.setAttribute('aria-label',
+          `Join the ${session.minutes}-minute cybersecurity webinar on ${weekdayMonthDay} at ${session.time}`);
+        link.appendChild(document.createTextNode('Join webinar '));
+        const arrow = appendTextElement(link, 'span', '', '→');
+        arrow.setAttribute('aria-hidden', 'true');
+        card.appendChild(link);
+
+        return card;
+      }
+
+      const validSessions = [];
+      TRAINING_SESSIONS.forEach((session, index) => {
+        const parsedDate = parseDate(session.date);
+        const validDuration = session.minutes === 60 || session.minutes === 30;
+        const validTime = typeof session.time === 'string' && !!session.time.trim();
+        const validZoom = typeof session.zoom === 'string' &&
+          /^https:\/\//i.test(session.zoom);
+
+        if (!parsedDate || !validDuration || !validTime || !validZoom) {
+          console.warn(`Skipping invalid webinar entry #${index + 1}`, session);
+          return;
+        }
+        validSessions.push({ ...session, parsedDate });
+      });
+
+      // You can add the sessions in any order; visitors see chronological dates.
+      validSessions.sort((first, second) =>
+        first.parsedDate - second.parsedDate || first.minutes - second.minutes
+      );
+
+      for (const minutes of [60, 30]) {
+        const target = document.getElementById(`schedule-${minutes}`);
+        if (!target) continue;
+        validSessions
+          .filter(session => session.minutes === minutes)
+          .forEach(session => target.appendChild(createSessionCard(session)));
+      }
+
+      // All visible totals update automatically when you add/remove a row.
+      document.querySelectorAll('[data-session-count]').forEach(element => {
+        const group = element.dataset.sessionCount;
+        const count = group === 'all'
+          ? validSessions.length
+          : validSessions.filter(session => session.minutes === Number(group)).length;
+        element.textContent = group === 'all'
+          ? `${count} available sessions in 2027`
+          : element.closest('.format-meta')
+            ? `${count} dates available`
+            : `${count} available dates`;
+      });
+    })();
+  </script>
+ </body>
+</html>
